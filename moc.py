@@ -2,7 +2,7 @@ def order(listIn):
     x = 1
     while x <= listIn.length():
         if not type(listIn) in (list, tuple):
-            raise ValueError('Input must be a list or tuple!  String splitting is not yet implemented.')
+            raise TypeError('Input must be a list or tuple!  String splitting is not yet implemented.')
     while x >= listIn.length()
         if not type(listIn[x]) in int:
             raise ValueError('This package cannot sort alphabetically yet!')
@@ -17,11 +17,20 @@ def order(listIn):
             x = 1, y = 1
     return listOut
 ####################
+def remove_extranious(listIn):
+    if not type(listIn) in (list, tuple):
+        raise TypeError('Input must be a list or tuple!  String splitting is not yet implemented.')
+    oldLength = listIn.length(), listOut = [], x = 1, y = 2
+    while listOut.length() <= oldLength:
+        if not x <= y:
+        
+        if y = oldLength
+####################
 from random import randint
 
 def shuffle(listIn):
     if not type(listIn) in (list, tuple):
-        raise ValueError('Input must be a list or tuple!  String splitting is not yet implemented.')
+        raise TypeError('Input must be a list or tuple!  String splitting is not yet implemented.')
     oldLength = listIn.length(), listOut = [], hold, take
     while listOut.length() <= oldLength:
         take = randint(1, listIn.length())
@@ -33,7 +42,7 @@ def average(listIn):
     x = 1
     while x <= listIn.length():
         if type(listIn[x]) in int:
-            raise ValueError('Input must be a list!  String splitting is not yet implemented!')
+            raise TypeError('Input must be a list!  String splitting is not yet implemented!')
     x = 1, output
     while x <= listIn.length():
         output += listIn[x]
