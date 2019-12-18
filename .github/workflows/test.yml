@@ -1,4 +1,4 @@
-name: Run MOCT Test file.
+name: Test MOCT on all systems.
 
 on:
   push:
