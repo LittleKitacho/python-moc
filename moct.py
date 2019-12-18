@@ -1,27 +1,38 @@
+def MoctValueError(msg):
+    return Exception('MoctValueError: '+msg)
+
 def order(listIn):
     x = 1
-    while x <= listIn.length():
-        if not type(listIn) in (list, tuple):
-            raise Exception('Input must be a list or tuple!  String splitting is not yet implemented.')
-    while x >= listIn.length():
-        if not type(listIn[x]) in int:
+    while x <= listIn.len():
+        if not isinstance(listIn, list):
+            raise MoctValueError('Input must be a list or tuple!  String splitting is not yet implemented.')
+        x += 1
+    while x >= listIn.len():
+        if not isinstance(listIn[x], int):
             raise Exception('This package cannot sort alphabetically yet!')
         x += 1
-    x = 1, y = 2, listOut = [], oldLength = listIn.length()
-    while listOut.length() <= oldLength:
+    x = 1
+    y = 2
+    listOut = []
+    oldLength = listIn.len()
+    while len(listOut) <= oldLength:
         if listIn[x] > listIn[y]:
             x = y
         if y == listIn.length():
             listOut.append(listIn[x])
             listIn.pop(x)
-            x = 1, y = 1
+            x = 1
+            y = 1
     return listOut
 ####################
 def remove_extranious(listIn):
     if not type(listIn) in (list, tuple):
         raise Exception('Input must be a list or tuple!  String splitting is not yet implemented.')
-    oldLength = listIn.length(), listOut = [], x = 1, y = 2
-    while listOut.length() <= oldLength:
+    oldLength = listIn.length()
+    listOut = []
+    x = 1
+    y = 2
+    while len(listOut) <= oldLength:
         if not x <= y:
             print ('thing')
         if y == oldLength:
@@ -32,20 +43,24 @@ from random import randint
 def shuffle(listIn):
     if not type(listIn) in (list, tuple):
         raise Exception('Input must be a list or tuple!  String splitting is not yet implemented.')
-    oldLength = listIn.length(), listOut = [], hold, take
-    while listOut.length() <= oldLength:
+    oldLength = listIn.length()
+    listOut = []
+    take = None
+    while len(listOut) <= oldLength:
         take = randint(1, listIn.length())
-        listOut.append(listIn[x])
-        listIn.pop(x)
+        listOut.append(listIn[take])
+        listIn.pop(take)
     return listOut
 ####################
 def average(listIn):
-    if type(listIn) in int:
+    if isinstance(listIn, int):
         raise Exception('Input must be a list!  String splitting is not yet implemented!')
     x = 1
     while x <= listIn.length():
-        if type(listIn[x]) in (list, tuple)
-    x = 1, output
+        if isinstance(listIn, list):
+            print('thing')
+    x = 1
+    output = None
     while x <= listIn.length():
         output += listIn[x]
     return output / listIn.length()
