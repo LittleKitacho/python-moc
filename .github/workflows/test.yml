@@ -1,4 +1,4 @@
-name: Test MOCT on all systems.
+name: Test MOCT on push
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
       - name: Setup PiP
         run: pip install --upgrade pip
       - name: Test package
-        run: ls
+        run: cd ../; ls
   macos-test:
     name: Test on macOS
     runs-on: macos-latest
