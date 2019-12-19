@@ -12,6 +12,11 @@ jobs:
     name: Test on Ubuntu
     runs-on: ubuntu-latest
     steps:
+      - name: Clone repo?
+        run: |
+          cd ../
+          git clone https://github.com/littlekitacho/python-moct.git
+          cd ./python-moct
       - name: Setup PiP
         run: pip install --upgrade pip
       - name: Test package
