@@ -1,6 +1,8 @@
 # python-moct
 A measures of central tendancy plugin for python.
-![](https://github.com/littlekitacho/python-moct/workflows/Test%20MOCT%20on%20push/badge.svg)
+
+![](https://github.com/littlekitacho/python-moct/workflows/Test%20MOCT%20on%20push/badge.svg?event=push)
+![](https://github.com/littlekitacho/python-moct/workflows/Publish%20MOCT%20on%20release/badge.svg)
 
 # Installation
 ## Pip Install
