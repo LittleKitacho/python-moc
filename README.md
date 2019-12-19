@@ -6,7 +6,7 @@ A measures of central tendancy plugin for python.
 Run `pip install moct` in your program directory, or 
 ## Manual Method:
 ### Latest Release
-1. Go to the (MOCT Repository)[https://github.com/littlekitacho/python-moct]
+1. Go to the [MOCT Repository](https://github.com/littlekitacho/python-moct)
 2. Click on the 'releases' tab
 3. Find the release you want.
 4. Download the source code in the preferred format.
