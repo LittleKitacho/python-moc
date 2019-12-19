@@ -15,7 +15,7 @@ jobs:
       - name: Setup PiP
         run: pip install --upgrade pip
       - name: Test package
-        run: cd /; ls
+        run: python ./test.py
   macos-test:
     name: Test on macOS
     runs-on: macos-latest
