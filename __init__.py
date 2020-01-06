@@ -1,14 +1,3 @@
-class MoctError(Exception):
-    """ Generic exception in MOCT """
-
-class MoctValueError(MoctError):
-    def __init__(self, msg):
-        self.message = "MoctValueError"
-        self.explanation = msg
-
-class MoctTypeError(MoctError):
-    pass
-
 def order(listIn):
     x = 1
     while x <= listIn.len():
