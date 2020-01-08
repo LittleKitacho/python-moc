@@ -2,11 +2,11 @@ def order(listIn):
     x = 1
     while x <= listIn.len():
         if not isinstance(listIn, list):
-            raise MoctTypeError('Input must be a list or tuple!  String splitting is not yet implemented.')
+            raise Exception('Input must be a list or tuple!  String splitting is not yet implemented.')
         x += 1
     while x >= listIn.len():
         if not isinstance(listIn[x], int):
-            raise MoctValueError('This package cannot sort alphabetically yet!')
+            raise Exception('This package cannot sort alphabetically yet!')
         x += 1
     x = 1
     y = 2
