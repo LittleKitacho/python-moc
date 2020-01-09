@@ -41,7 +41,6 @@ def shuffle(listIn):
         raise Exception('Input must be a list or tuple!  String splitting is not yet implemented.')
     oldLength = listIn.length()
     listOut = []
-    take = None
     while len(listOut) <= oldLength:
         take = randint(1, listIn.length())
         listOut.append(listIn[take])
