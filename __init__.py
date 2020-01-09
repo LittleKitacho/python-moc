@@ -25,20 +25,19 @@ def order(listIn):
 def remove_extranious(listIn):
     if not type(listIn) in (list, tuple):
         raise Exception('Input must be a list or tuple!  String splitting is not yet implemented.')
-    oldLength = listIn.length()
+    oldLength = len(listIn)
     listOut = []
     x = 1
-    y = 2
     while len(listOut) <= oldLength:
-        if not x <= y:
-            print ('thing')
-        if y == oldLength:
-            print('thing')
+        if not listIn[x] in listOut:
+            listOut.append(listIn[x])
+        x += 1
+    return listOut
 ####################
 from random import randint
 
 def shuffle(listIn):
-    if not type(listIn) in (list, tuple):
+    if not isinstance(listIn, list):
         raise Exception('Input must be a list or tuple!  String splitting is not yet implemented.')
     oldLength = listIn.length()
     listOut = []
