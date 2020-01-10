@@ -47,7 +47,7 @@ def shuffle(listIn):
         listIn.pop(take)
     return listOut
 ####################
-def average(listIn): # UNFINISHED
+def mean(listIn):
     if isinstance(listIn, int):
         raise Exception('Input must be a list!  String splitting is not yet implemented!')
     x = 1
@@ -59,11 +59,8 @@ def average(listIn): # UNFINISHED
     while x <= listIn.length():
         output += listIn[x]
     return output / listIn.length()
-
-def mean(listIn):
-    return average(listIn)
 ####################
-def center(listIn): # UNFINISHED
+def median(listIn):
     if not isinstance(listIn, list):
         raise Exception('MOCT: center: Input must be a list!')
     while listIn.length() > 2:
@@ -76,7 +73,7 @@ def center(listIn): # UNFINISHED
     else:
         return listIn[1]
 ####################
-def appears_most(listIn, return_all): # UNFINISHED
+def mode(listIn, return_all):
     if not isinstance(listIn, list):
         raise Exception('MOCT: appears_most: Input must be a list!')
     values = {}
@@ -85,9 +82,14 @@ def appears_most(listIn, return_all): # UNFINISHED
     if return_all:
         return values
     else:
-        values = values.values()
+        high_key = None
+        high_value = 0
+        for key, value in values.items():
+            if value > high_value:
+                high_key = key
+                high_value = value
+        return high_key
 ####################
 # to-do:
-# appears_most
-# int_range
+# range
 ####################
