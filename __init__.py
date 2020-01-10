@@ -39,7 +39,7 @@ from random import randint
 def shuffle(listIn):
     if not isinstance(listIn, list):
         raise Exception('Input must be a list or tuple!  String splitting is not yet implemented.')
-    oldLength = listIn.length()
+    oldLength = len(listIn)
     listOut = []
     while len(listOut) <= oldLength:
         take = randint(1, listIn.length())
@@ -47,7 +47,7 @@ def shuffle(listIn):
         listIn.pop(take)
     return listOut
 ####################
-def average(listIn):
+def average(listIn): # UNFINISHED
     if isinstance(listIn, int):
         raise Exception('Input must be a list!  String splitting is not yet implemented!')
     x = 1
@@ -61,14 +61,33 @@ def average(listIn):
     return output / listIn.length()
 
 def mean(listIn):
-    average(listIn)
+    return average(listIn)
 ####################
-def center(listIn):
-
-    while listIn.length() >= 2:
+def center(listIn): # UNFINISHED
+    if not isinstance(listIn, list):
+        raise Exception('MOCT: center: Input must be a list!')
+    while listIn.length() > 2:
         listIn.pop(1)
         listIn.pop(listIn.length)
     if listIn.length() == 2:
         output = listIn[1]
         output += listIn[2]
-        return output
+        return output / 2
+    else:
+        return listIn[1]
+####################
+def appears_most(listIn, return_all): # UNFINISHED
+    if not isinstance(listIn, list):
+        raise Exception('MOCT: appears_most: Input must be a list!')
+    values = {}
+    for x in listIn:
+        values[str(x)] += 1
+    if return_all:
+        return values
+    else:
+        values = values.values()
+####################
+# to-do:
+# appears_most
+# int_range
+####################
