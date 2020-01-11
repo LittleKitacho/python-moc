@@ -36,15 +36,6 @@ else:
 '''
 
 try:
-    result = moct.average
-except Exception as error:
-    raise Exception('Average returned an error while executing:\n'+error)
-else:
-    if result != 4.8:
-        raise Exception('Average returned wrong result.\nExpected 4.8, got '+str(result))
-    else:
-        print('Average tested out succsessfully')
-try:
     result = moct.mean(testList)
 except Exception as error:
     raise Exception('Mean returned an error while executing:\n'+error)
