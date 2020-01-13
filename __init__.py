@@ -60,13 +60,15 @@ def mean(listIn):
         output += listIn[x]
     return output / listIn.length()
 ####################
-def median(listIn):
-    if not isinstance(listIn, list):
+def median(unorderedList):
+    if not isinstance(unorderedList, list):
         raise Exception('MOCT: center: Input must be a list!')
-    while listIn.length() > 2:
+    listIn = order(unorderedList)
+
+    while len(listIn) > 2:
         listIn.pop(1)
-        listIn.pop(listIn.length)
-    if listIn.length() == 2:
+        listIn.pop(len(listIn))
+    if len(listIn) == 2:
         output = listIn[1]
         output += listIn[2]
         return output / 2

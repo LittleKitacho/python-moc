@@ -23,7 +23,6 @@ else:
     else:
         print('Remove Extranious tested out succsessfully')
 
-'''
 try:
     result = moct.shuffle(testList)
 except Exception as error:
@@ -33,7 +32,6 @@ else:
         raise Exception('Shuffle returned wrong result, expected something other than [1, 2, 3, 4, 3, 5, 6, 9, 8, 7] but got '+str(result))
     else:
         print('Shuffle tested out succsessfully')
-'''
 
 try:
     result = moct.mean(testList)
@@ -42,3 +40,12 @@ except Exception as error:
 else:
     if result != 4.8:
         raise Exception('Mean returned wrong result.\nExpected 4.8, got '+str(result))
+    else:
+        print('Mean tested out succsessfully')
+
+try:
+    result = moct.median(testList)
+except Exception as error:
+    raise Exception('Medain returned an error while executing:\n'+error)
+else:
+    if result != 
